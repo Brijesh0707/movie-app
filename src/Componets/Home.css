@@ -1,0 +1,107 @@
+#navbar{
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Sans Regular';
+    font-weight: 500;
+}
+#color-text{
+    padding: 10px;
+}
+#search1{
+    padding-bottom: 10px;
+    font-family: 'Lucida Sans Regular';
+}
+
+#search{
+    width: 300px;
+    border: 2px solid red;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+}
+
+#cards{
+    width: 300px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 5px ;
+    margin-top: 20px;
+    margin-left: 100px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#movie-img{
+    padding: 20px;
+}
+
+#btn{
+    width: 250px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+}
+
+#cards:hover{
+    background-color: rgb(166, 162, 162);
+    border: 1px solid red;
+    color: white;
+}
+
+#loading{
+    text-align: center;
+    align-items: center;
+    color: red;
+    margin-left: 550px;
+}
+
+@media (max-width:450px) {
+    #loading{
+        text-align: center;
+        align-items: center;
+        color: red;
+        margin-left: 10px;
+    }
+    #cards{
+        width: 300px;
+        height: 420px;
+        border: 1px solid black;
+        border-radius: 5px ;
+        margin-top: 20px;
+        margin-left: 50px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    
+
+}
+
+
+@media (max-width:361px) {
+    #loading{
+        text-align: center;
+        align-items: center;
+        color: red;
+        margin-left: 10px;
+    }
+    #cards{
+        width: 300px;
+        height: 420px;
+        border: 1px solid black;
+        border-radius: 5px ;
+        margin-top: 20px;
+        margin-left: 20px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    
+
+}
