@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import '../Componets/Single.css'
+import "../Componets/Single.css";
+
 const Single = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -11,12 +12,11 @@ const Single = () => {
     const fetchMovie = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(
-          `https://api.tvmaze.com/shows/${movieId}`
-        );
+        const response = await axios.get(`https://api.tvmaze.com/shows/${movieId}`);
         const movieData = response.data;
         // Remove <p> tags from the summary
         movieData.summary = movieData.summary.replace(/<p>/g, "").replace(/<\/p>/g, "");
+        movieData.summary = movieData.summary.replace(/<b>/g, "").replace(/<\/b>/g, "");
         setMovie(movieData);
         setIsLoading(false);
       } catch (error) {
@@ -44,12 +44,7 @@ const Single = () => {
       </div>
       <div className="row">
         <div className="col-md-4">
-          <img
-            src={movie.image?.medium}
-            alt={movie.name}
-            className="img-fluid"
-            id="img1"
-          />
+          <img src={movie.image?.medium} alt={movie.name} className="img-fluid" id="img1" />
         </div>
         <div className="col-md-8 mt-5" id="detail1">
           <h2>Summary</h2>
@@ -68,7 +63,13 @@ const Single = () => {
               {movie.officialSite}
             </a>
           </p>
-          <Link to="/" className="btn " id="back1">
+          <Link to={`/form/${movieId}`}>
+            <button type="button" id="book1">
+            Book Ticket
+            </button>
+          </Link>
+          <br></br>
+          <Link to="/" className="btn" id="back1">
             Back to Home
           </Link>
         </div>

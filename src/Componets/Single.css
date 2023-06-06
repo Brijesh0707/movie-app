@@ -30,6 +30,15 @@
     margin-top: 20px;
 }
 
+#book1{
+    width: 200px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 
 @media (max-width:450px) {
     #img1{

@@ -1,0 +1,49 @@
+#main001{
+    width: 500px;
+    height: 590px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 50px;
+   
+
+}
+
+.book-ticket{
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+.form-group label{
+    padding-top: 20px;
+    font-family: 'Lucida Sans Regular';
+    font-weight: bold;
+}
+
+#bsubmit{
+    width: 200px;
+    background-color: blue;
+    color: white;
+    font-weight: 800;
+    font-family: 'Lucida Sans Regular';
+}
+.form-group input{
+    border: 2px solid black;
+}
+
+
+@media (max-width:450px) {
+    #main001{
+        width: 415px;
+        height: 590px;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 50px;
+       
+    
+    }
+    
+    
+}
